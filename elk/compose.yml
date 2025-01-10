@@ -13,6 +13,8 @@ services:
         hard: -1
     volumes:
       - esdata:/usr/share/elasticsearch/data
+    env_file:
+      - .env
     ports:
       - 9200:9200
     networks:
