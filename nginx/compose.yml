@@ -1,0 +1,12 @@
+services:
+  nginx:
+    image: nginx:1.27.4
+    container_name: nginx
+    ports:
+      - 8080:80
+    volumes:
+      # Customize nginx.conf
+      # - ./nginx.conf:/etc/nginx/nginx.conf
+
+      # Bind the example website stored in the host machine to the container
+      - ./web:/usr/share/nginx/html
